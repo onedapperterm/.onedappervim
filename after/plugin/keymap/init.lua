@@ -1,0 +1,42 @@
+local Remap = require("onedapperterm.keymap")
+local nnoremap = Remap.nnoremap
+local vnoremap = Remap.vnoremap
+local inoremap = Remap.inoremap
+--local xnorejap = Remap.xnoremap
+--local nmap = Remap.nmap
+
+--Nvim Tree
+nnoremap("<C-t>", ":NvimTreeToggle<CR>")
+
+--Splits Navigation
+nnoremap("<C-h>", "<C-w>h")
+nnoremap("<C-l>", "<C-w>l")
+inoremap("<C-h>", "<C-w>h")
+inoremap("<C-l>", "<C-w>l")
+vnoremap("<C-h>", "<C-w>h")
+vnoremap("<C-l>", "<C-w>l")
+
+--Buffers Navigation
+nnoremap("<s-tab>", ":bprevious<CR>")
+nnoremap("<tab>", ":bnext<CR>")
+
+--Line Options
+nnoremap("ˆ", "yyP")
+nnoremap("ı", "yyp")
+nnoremap("º", ":m .+1<CR>==")
+nnoremap("∆", ":m .-2<CR>==")
+
+inoremap("ˆ", "<Esc>yyP==gi")
+inoremap("ı", "<Esc>yyp==gi")
+inoremap("º", "<Esc>:m .+1<CR>==gi")
+inoremap("∆", "<Esc>:m .-2<CR>==gi")
+
+vnoremap("ˆ", "y'>p")
+vnoremap("ı", "y'<pgv=gv")
+vnoremap("º", ":m '>+1<CR>gv=gv")
+vnoremap("∆", ":m '<-2<CR>gv=gv")
+
+--Telescope
+nnoremap("<C-p>", ":Telescope find_files<CR>")
+inoremap("<C-p>", "<Esc>:Telescope find_files<CR>==gi")
+vnoremap("<C-p>", ":Telescope find_files<CR>gv==gv")
