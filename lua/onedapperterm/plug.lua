@@ -5,6 +5,11 @@ vim.call('plug#begin','~/.vim/plugged')
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 
+--TREE SITTER
+Plug 'nvim-treesitter/nvim-treesitter'
+Plug 'JoosepAlviste/nvim-ts-context-commentstring'
+Plug 'windwp/nvim-autopairs'
+
 --LSP
 Plug 'neovim/nvim-lspconfig'
 Plug 'williamboman/nvim-lsp-installer'
@@ -21,7 +26,6 @@ Plug 'saadparwaiz1/cmp_luasnip'
 --SINPPS
 Plug 'L3MON4D3/LuaSnip'
 Plug 'rafamadriz/friendly-snippets'
-
 
 --TELESCOPE
 Plug 'nvim-telescope/telescope.nvim'
