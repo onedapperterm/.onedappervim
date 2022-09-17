@@ -19,6 +19,7 @@ vnoremap("<C-l>", "<C-w>l")
 --Buffers Navigation
 nnoremap("<s-tab>", ":bprevious<CR>")
 nnoremap("<tab>", ":bnext<CR>")
+nnoremap("<s-q>", ":bd<CR>")
 
 --Line Options
 nnoremap("ˆ", "yyP")
@@ -40,3 +41,6 @@ vnoremap("∆", ":m '<-2<CR>gv=gv")
 nnoremap("<C-p>", ":Telescope find_files<CR>")
 inoremap("<C-p>", "<Esc>:Telescope find_files<CR>==gi")
 vnoremap("<C-p>", ":Telescope find_files<CR>gv==gv")
+
+--Others
+nnoremap ("<esc><esc>", ":silent! nohls<cr>")

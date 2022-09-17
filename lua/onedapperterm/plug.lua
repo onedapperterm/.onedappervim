@@ -23,9 +23,12 @@ Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'hrsh7th/cmp-nvim-lua'
 Plug 'saadparwaiz1/cmp_luasnip'
 
---SINPPS
+--SINPPS AND UTILITIES
 Plug 'L3MON4D3/LuaSnip'
 Plug 'rafamadriz/friendly-snippets'
+Plug 'mattn/emmet-vim'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-commentary'
 
 --TELESCOPE
 Plug 'nvim-telescope/telescope.nvim'
@@ -35,6 +38,7 @@ Plug 'nvim-telescope/telescope-file-browser.nvim'
 --LINE
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'akinsho/bufferline.nvim'
+Plug 'phanviet/vim-monokai-pro'
 
 --ICONS
 Plug 'kyazdani42/nvim-web-devicons'
@@ -46,5 +50,6 @@ Plug 'kyazdani42/nvim-tree.lua'
 
 --COLORS
 Plug 'artanikin/vim-synthwave84'
+Plug 'mhartington/oceanic-next'
 
 vim.call('plug#end')

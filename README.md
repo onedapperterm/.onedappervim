@@ -1,2 +1,2 @@
 # .dotfiles
-My Nvim config
+My own Nvim personal config with blackjack and hookers!
