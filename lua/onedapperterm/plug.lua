@@ -29,6 +29,7 @@ Plug 'rafamadriz/friendly-snippets'
 Plug 'mattn/emmet-vim'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
+-- Plug 'lukas-reineke/indent-blankline.nvim'
 
 --TELESCOPE
 Plug 'nvim-telescope/telescope.nvim'

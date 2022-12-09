@@ -42,5 +42,12 @@ nnoremap("<C-p>", ":Telescope find_files<CR>")
 inoremap("<C-p>", "<Esc>:Telescope find_files<CR>==gi")
 vnoremap("<C-p>", ":Telescope find_files<CR>gv==gv")
 
+--SOME NICE MOVES
+nnoremap ("<s-l>", "A<Esc>")
+nnoremap ("<s-h>", "_")
+vnoremap ("<s-l>", "A<Esc>")
+vnoremap ("<s-h>", "_")
+
 --Others
+nnoremap("<leader>il", ":IndentBlanklineToggle<CR>")
 nnoremap ("<esc><esc>", ":silent! nohls<cr>")
