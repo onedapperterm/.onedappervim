@@ -39,6 +39,7 @@ vnoremap("∆", ":m '<-2<CR>gv=gv")
 
 --Telescope
 nnoremap("<C-p>", ":Telescope find_files<CR>")
+nnoremap("gr",    ":Telescope lsp_references<CR>")
 inoremap("<C-p>", "<Esc>:Telescope find_files<CR>==gi")
 vnoremap("<C-p>", ":Telescope find_files<CR>gv==gv")
 

@@ -6,8 +6,10 @@
 --Oceanic
 
 vim.opt.syntax = "enable"
-vim.cmd("colorscheme OceanicNext")
+-- vim.cmd("colorscheme OceanicNext")
 
 --Monokai Pro
 
---vim.cmd("colorscheme monokai_pro")
+-- vim.cmd("colorscheme monokai_pro")
+
+vim.cmd("colorscheme bogster")
