@@ -50,8 +50,6 @@ Plug 'kristijanhusak/defx-icons'
 Plug 'kyazdani42/nvim-tree.lua'
 
 --COLORS
-Plug 'artanikin/vim-synthwave84'
-Plug 'mhartington/oceanic-next'
 Plug 'vv9k/bogster'
 
 
