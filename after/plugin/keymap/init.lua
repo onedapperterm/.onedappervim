@@ -2,7 +2,7 @@ local Remap = require("onedapperterm.keymap")
 local nnoremap = Remap.nnoremap
 local vnoremap = Remap.vnoremap
 local inoremap = Remap.inoremap
---local xnorejap = Remap.xnoremap
+local xnoremap = Remap.xnoremap
 --local nmap = Remap.nmap
 
 --Nvim Tree
@@ -52,3 +52,14 @@ vnoremap ("<s-h>", "_")
 --Others
 nnoremap("<leader>il", ":IndentBlanklineToggle<CR>")
 nnoremap ("<esc><esc>", ":silent! nohls<cr>")
+
+--Paste without loosing current register
+xnoremap("<leader>p", "\"_dP")
+
+--Copy to system clipboard
+nnoremap("<leader>y", "\"+y")
+vnoremap("<leader>y", "\"+y")
+nnoremap("<leader>Y", "\"+y")
+
+--Search and replace current word
+nnoremap("<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])

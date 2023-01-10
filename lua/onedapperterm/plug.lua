@@ -30,7 +30,8 @@ Plug 'rafamadriz/friendly-snippets'
 Plug 'mattn/emmet-vim'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
--- Plug 'lukas-reineke/indent-blankline.nvim'
+Plug 'tpope/vim-fugitive'
+Plug 'mbbill/undotree'
 
 --TELESCOPE
 Plug 'nvim-telescope/telescope.nvim'
