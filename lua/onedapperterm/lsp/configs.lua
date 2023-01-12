@@ -1,39 +1,44 @@
-local status_mason_ok, mason = pcall(require, "mason")
-if not status_mason_ok then
+local status_ok, lsp = pcall(require, "lsp-zero")
+if not status_ok then
 	return
 end
 
-local status_mason_lsp_ok, mason_lspconfig = pcall(require, "mason-lspconfig")
-if not status_mason_lsp_ok then
-	return
-end
+lsp.preset("recommended")
 
 local servers = { "jsonls", "sumneko_lua", "angularls", "cssls", "tsserver", "eslint", "html", "pyright"}
 
-local lspconfig = require("lspconfig")
+lsp.ensure_installed(servers)
 
-mason.setup({
-   ui = {
-        icons = {
-            package_installed = "✓",
-            package_pending = "➜",
-            package_uninstalled = "✗"
+for _, server in pairs(servers) do
+  lsp.configure( server, {
+    on_attach = require("onedapperterm.lsp.handlers").on_attach,
+  })
+
+end
+
+--TODO: Check how to pass the custom configs on the loop to lsp-zero for every server
+lsp.configure('sumneko_lua', {
+    settings = {
+        Lua = {
+            -- Fix Undefined global 'vim'
+            diagnostics = {
+                globals = { 'vim' }
+            }
         }
     }
 })
 
-mason_lspconfig.setup({
-  ensure_installed = servers
-})
 
-for _, server in pairs(servers) do
-	local opts = {
-		on_attach = require("onedapperterm.lsp.handlers").on_attach,
-		capabilities = require("onedapperterm.lsp.handlers").capabilities,
-	}
-	local has_custom_opts, server_custom_opts = pcall(require, "onedapperterm.lsp.settings." .. server)
-	if has_custom_opts then
-		opts = vim.tbl_deep_extend("force", opts, server_custom_opts)
-	end
-  lspconfig[server].setup(opts)
-end
+lsp.setup()
+
+-- for _, server in pairs(servers) do
+-- 	local opts = {
+-- 		on_attach = require("onedapperterm.lsp.handlers").on_attach,
+-- 		capabilities = require("onedapperterm.lsp.handlers").capabilities,
+-- 	}
+-- 	local has_custom_opts, server_custom_opts = pcall(require, "onedapperterm.lsp.settings." .. server)
+-- 	if has_custom_opts then
+-- 		opts = vim.tbl_deep_extend("force", opts, server_custom_opts)
+-- 	end
+--   lspconfig[server].setup(opts)
+-- end

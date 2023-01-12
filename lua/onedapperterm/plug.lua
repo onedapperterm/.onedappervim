@@ -27,6 +27,7 @@ Plug 'saadparwaiz1/cmp_luasnip'
 --SINPPS AND UTILITIES
 Plug 'L3MON4D3/LuaSnip'
 Plug 'rafamadriz/friendly-snippets'
+Plug 'VonHeikemen/lsp-zero.nvim'
 Plug 'mattn/emmet-vim'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
