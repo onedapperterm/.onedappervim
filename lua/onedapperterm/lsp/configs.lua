@@ -5,7 +5,7 @@ end
 
 lsp.preset("recommended")
 
-local servers = { "jsonls", "sumneko_lua", "angularls", "cssls", "tsserver", "eslint", "html", "pyright"}
+local servers = { "jsonls", "angularls", "lua_ls", "cssls", "tsserver", "eslint", "html", "pyright"}
 
 lsp.ensure_installed(servers)
 
@@ -17,7 +17,7 @@ for _, server in pairs(servers) do
 end
 
 --TODO: Check how to pass the custom configs on the loop to lsp-zero for every server
-lsp.configure('sumneko_lua', {
+lsp.configure('lua_ls', {
     settings = {
         Lua = {
             -- Fix Undefined global 'vim'
