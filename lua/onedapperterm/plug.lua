@@ -55,5 +55,7 @@ Plug 'kyazdani42/nvim-tree.lua'
 --COLORS
 Plug 'vv9k/bogster'
 
+--UTIL
+Plug 'itchyny/calendar.vim'
 
 vim.call('plug#end')
