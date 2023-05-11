@@ -54,6 +54,13 @@ nnoremap("<C-p>", ":Telescope find_files<CR>")
 inoremap("<C-p>", "<Esc>:Telescope find_files<CR>==gi")
 vnoremap("<C-p>", ":Telescope find_files<CR>gv==gv")
 
+--DAP
+nnoremap("<leader>db", ":lua require'dap'.toggle_breakpoint()<CR>")
+nnoremap("<leader>dc", ":lua require'dap'.continue()<CR>")
+nnoremap("<leader>do", ":lua require'dap'.step_over()<CR>")
+nnoremap("<leader>di", ":lua require'dap'.step_into()<CR>")
+nnoremap("<leader>dx", ":lua require'dap'.step_out()<CR>")
+
 --Fugitive
 nnoremap("<leader>gs", ":tab Git <CR>" )
 nnoremap("<leader>ga", ":tab Git add . <CR>" )
@@ -61,9 +68,11 @@ nnoremap("<leader>gc", ":tab Git commit <CR>" )
 
 --SOME NICE MOVES
 nnoremap ("<s-l>", "$")
-nnoremap ("<s-h>", "0")
+nnoremap ("<s-h>", "_")
 vnoremap ("<s-l>", "$h")
-vnoremap ("<s-h>", "0")
+vnoremap ("<s-h>", "_")
+nnoremap ("ª", "b")
+nnoremap ("@", "w")
 
 --Others
 nnoremap ("<esc><esc>", ":silent! nohls<cr>")

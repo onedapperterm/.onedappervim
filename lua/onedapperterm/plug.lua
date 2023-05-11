@@ -9,6 +9,7 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-treesitter/nvim-treesitter'
 Plug 'JoosepAlviste/nvim-ts-context-commentstring'
 Plug 'windwp/nvim-autopairs'
+Plug 'm-demare/hlargs.nvim'
 
 --LSP
 Plug 'neovim/nvim-lspconfig'
@@ -34,6 +35,14 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'mbbill/undotree'
 
+--DEBUGGING TOOLS
+Plug 'mfussenegger/nvim-dap'
+Plug 'rcarriga/nvim-dap-ui'
+Plug 'theHamsta/nvim-dap-virtual-text'
+Plug 'nvim-telescope/telescope-dap.nvim'
+--NVIM DAP ADAPTERS
+Plug 'mxsdev/nvim-dap-vscode-js' --adapter for vscode-js-debug
+
 --TELESCOPE
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-telescope/telescope-media-files.nvim'
@@ -53,9 +62,21 @@ Plug 'kristijanhusak/defx-icons'
 Plug 'kyazdani42/nvim-tree.lua'
 
 --COLORS
+Plug 'onedapperterm/onedapperpro.nvim'
 Plug 'vv9k/bogster'
+Plug 'maxmx03/dracula.nvim'
+Plug 'maxmx03/fluoromachine.nvim'
+Plug 'mhartington/oceanic-next'
+Plug 'morhetz/gruvbox'
+Plug 'sainnhe/everforest'
+Plug 'sainnhe/sonokai'
+Plug 'sainnhe/gruvbox-material'
+Plug 'tomasr/molokai'
+Plug 'nvimdev/oceanic-material'
 
 --UTIL
 Plug 'itchyny/calendar.vim'
+Plug 'rhysd/vim-grammarous'
+Plug 'norcalli/nvim-colorizer.lua'
 
 vim.call('plug#end')

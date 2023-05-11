@@ -18,3 +18,8 @@ configs.setup({
         enable = true
     }
 })
+
+vim.api.nvim_set_hl(0, "@foo.bar.lua", { link = "myReturn" })
+
+-- hlargs plugin
+require('hlargs').setup()
