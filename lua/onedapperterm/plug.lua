@@ -78,5 +78,8 @@ Plug 'nvimdev/oceanic-material'
 Plug 'itchyny/calendar.vim'
 Plug 'rhysd/vim-grammarous'
 Plug 'norcalli/nvim-colorizer.lua'
+Plug 'jamestthompson3/nvim-remote-containers'
+Plug 'MunifTanjim/nui.nvim'
+Plug 'folke/noice.nvim'
 
 vim.call('plug#end')

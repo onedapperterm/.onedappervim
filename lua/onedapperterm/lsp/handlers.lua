@@ -83,7 +83,7 @@ end
 M.on_attach = function(client, bufnr)
 	-- vim.notify(client.name .. " starting...")
 	-- TODO: refactor this into a method that checks if string in list
-	if client.name == "tsserver" then
+	if client.name == "tsserver" or client.name == "astro" then
 		client.server_capabilities.documentFormattingProvider = false
     client.server_capabilities.semanticTokensProvider = nil
 	end

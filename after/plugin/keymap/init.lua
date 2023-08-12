@@ -26,6 +26,7 @@ nnoremap("<tab>", ":bnext<CR>")
 nnoremap("<s-q>", ":bd<CR>")
 nnoremap("<s-left>", ":BufferLineMovePrev<CR>")
 nnoremap("<s-right>", ":BufferLineMoveNext<CR>")
+nnoremap("<leader>v", ":vsplit<CR>")
 
 --Line Options
 nnoremap("ˆ", "yyP")
@@ -72,7 +73,11 @@ nnoremap ("<s-h>", "_")
 vnoremap ("<s-l>", "$h")
 vnoremap ("<s-h>", "_")
 nnoremap ("ª", "b")
-nnoremap ("@", "w")
+nnoremap ("@", "w") --accidentally remaped the @ for the macros :/
+vnoremap ("ª", "b")
+vnoremap ("@", "w") --accidentally remaped the @ for the macros :/
+nnoremap("<leader>m", "@") --but running them with leader + m is actually better :D
+vnoremap("<leader>m", "@") --but running them with leader + m is actually better :D
 
 --Others
 nnoremap ("<esc><esc>", ":silent! nohls<cr>")
