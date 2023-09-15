@@ -5,7 +5,7 @@ end
 
 lsp.preset("recommended")
 
-local servers = { "jsonls", "angularls", "lua_ls", "cssls", "tsserver", "eslint", "html", "pyright", "astro"}
+local servers = { "jsonls", "angularls", "lua_ls", "cssls", "tsserver", "eslint", "html", "pyright", "astro" }
 
 lsp.ensure_installed(servers)
 

@@ -48,24 +48,25 @@ vnoremap("∆", ":m '<-2<CR>gv=gv")
 nnoremap("<leader>r", ":Telescope lsp_references<CR>")
 vim.api.nvim_buf_set_keymap(0, 'n', 'gr', '<cmd>Telescope lsp_references<cr>', { noremap = true }) --nnoremap function not working well with this mapping
 vim.api.nvim_buf_set_keymap(0, 'n', 'gd', '<cmd>Telescope lsp_definitions<cr>', { noremap = true }) --nnoremap function not working well with this mapping
-nnoremap("<leader>di", ":Telescope git_status<CR>")
-nnoremap("<leader>gb", ":Telescope git_<CR>")
 nnoremap("<leader>lo", ":Telescope git_bcommits<CR>")
 nnoremap("<C-p>", ":Telescope find_files<CR>")
 inoremap("<C-p>", "<Esc>:Telescope find_files<CR>==gi")
 vnoremap("<C-p>", ":Telescope find_files<CR>gv==gv")
 
 --DAP
-nnoremap("<leader>db", ":lua require'dap'.toggle_breakpoint()<CR>")
-nnoremap("<leader>dc", ":lua require'dap'.continue()<CR>")
-nnoremap("<leader>do", ":lua require'dap'.step_over()<CR>")
-nnoremap("<leader>di", ":lua require'dap'.step_into()<CR>")
-nnoremap("<leader>dx", ":lua require'dap'.step_out()<CR>")
+-- nnoremap("<leader>db", ":lua require'dap'.toggle_breakpoint()<CR>")
+-- nnoremap("<leader>dc", ":lua require'dap'.continue()<CR>")
+-- nnoremap("<leader>do", ":lua require'dap'.step_over()<CR>")
+-- nnoremap("<leader>di", ":lua require'dap'.step_into()<CR>")
+-- nnoremap("<leader>dx", ":lua require'dap'.step_out()<CR>")
 
 --Fugitive
 nnoremap("<leader>gs", ":tab Git <CR>" )
 nnoremap("<leader>ga", ":tab Git add . <CR>" )
 nnoremap("<leader>gc", ":tab Git commit <CR>" )
+nnoremap("<leader>gb", ":tab Git blame<CR>")
+nnoremap("<leader>dc", ":Git diff --cached<CR>")
+nnoremap("<leader>di", ":Telescope git_status<CR>")
 
 --SOME NICE MOVES
 nnoremap ("<s-l>", "$")
