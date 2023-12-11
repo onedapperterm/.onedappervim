@@ -14,9 +14,6 @@ configs.setup({
         enable = true,
     },
     indent = { enable = true, disable = { "python", "css" } },
-    context_commentstring = {
-        enable = true
-    }
 })
 
 vim.api.nvim_set_hl(0, "@foo.bar.lua", { link = "myReturn" })

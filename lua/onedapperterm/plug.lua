@@ -80,6 +80,7 @@ Plug 'rhysd/vim-grammarous'
 Plug 'norcalli/nvim-colorizer.lua'
 Plug 'jamestthompson3/nvim-remote-containers'
 Plug 'MunifTanjim/nui.nvim'
+Plug 'rcarriga/nvim-notify'
 Plug 'folke/noice.nvim'
 
 vim.call('plug#end')
