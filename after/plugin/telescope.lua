@@ -1,6 +1,6 @@
 require('telescope').setup{
   defaults = {
-    file_ignore_patterns = {"node_modules", "env"},
+    file_ignore_patterns = {"node_modules"},
     mappings = {
       i = {
         -- map actions.which_key to <C-h> (default: <C-/>)
@@ -37,14 +37,26 @@ require('telescope').setup{
       },
     },
     media_files = {
-    -- filetypes whitelist
-    filetypes = {"png", "webp", "jpg", "jpeg", "pdf"},
-    find_cmd = "rg" -- find command (defaults to `fd`)
-  }
+      -- filetypes whitelist
+      filetypes = {"png", "webp", "jpg", "jpeg", "pdf"},
+      find_cmd = "rg" -- find command (defaults to `fd`)
+    }
   }
 }
 
 
 require("telescope").load_extension "media_files"
 require("telescope").load_extension "file_browser"
+require("telescope").load_extension "harpoon"
 
+-- ignores env and node files in specific node or python projects
+vim.api.nvim_exec([[
+  augroup MyTelescopeConfig
+    autocmd!
+    autocmd BufRead,BufNewFile */package.json setlocal filetype=node
+    autocmd BufRead,BufNewFile */requirements.txt setlocal filetype=python
+    autocmd BufRead,BufNewFile */pyproject.toml setlocal filetype=python
+    autocmd FileType node setlocal telescope_file_ignore_patterns+=/node_modules/
+    autocmd FileType python setlocal telescope_file_ignore_patterns+=*.env
+  augroup END
+]], false)

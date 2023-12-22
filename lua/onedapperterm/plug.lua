@@ -60,6 +60,7 @@ Plug 'kristijanhusak/defx-icons'
 
 --FILE BROWSER
 Plug 'kyazdani42/nvim-tree.lua'
+Plug 'ThePrimeagen/harpoon'
 
 --COLORS
 Plug 'onedapperterm/onedapperpro.nvim'
@@ -81,6 +82,8 @@ Plug 'norcalli/nvim-colorizer.lua'
 Plug 'jamestthompson3/nvim-remote-containers'
 Plug 'MunifTanjim/nui.nvim'
 Plug 'rcarriga/nvim-notify'
-Plug 'folke/noice.nvim'
+
+--JAVA
+Plug 'mfussenegger/nvim-jdtls'
 
 vim.call('plug#end')

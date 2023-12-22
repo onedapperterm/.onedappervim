@@ -45,13 +45,18 @@ vnoremap("º", ":m '>+1<CR>gv=gv")
 vnoremap("∆", ":m '<-2<CR>gv=gv")
 
 --Telescope
-nnoremap("<leader>r", ":Telescope lsp_references<CR>")
+nnoremap("<leader>r", ":Telescope lsp_references<CR><ESC>")
 vim.api.nvim_buf_set_keymap(0, 'n', 'gr', '<cmd>Telescope lsp_references<cr>', { noremap = true }) --nnoremap function not working well with this mapping
 vim.api.nvim_buf_set_keymap(0, 'n', 'gd', '<cmd>Telescope lsp_definitions<cr>', { noremap = true }) --nnoremap function not working well with this mapping
-nnoremap("<leader>lo", ":Telescope git_bcommits<CR>")
+nnoremap("<leader>lo", ":Telescope git_bcommits<CR><ESC>")
 nnoremap("<C-p>", ":Telescope find_files<CR>")
 inoremap("<C-p>", "<Esc>:Telescope find_files<CR>==gi")
 vnoremap("<C-p>", ":Telescope find_files<CR>gv==gv")
+
+--Harpoon
+nnoremap("<leader>h", ":Telescope harpoon marks<CR><ESC>")
+nnoremap("<leader>af", ":lua require(\"harpoon.mark\").add_file()<CR>")
+nnoremap("<leader>rf", ":lua require(\"harpoon.mark\").rm_file()<CR>")
 
 --DAP
 -- nnoremap("<leader>db", ":lua require'dap'.toggle_breakpoint()<CR>")
