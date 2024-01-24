@@ -21,5 +21,9 @@ require('harpoon').setup( {
   tabline = false,
   tabline_prefix = "   ",
   tabline_suffix = "   ",
+
+  menu = {
+    width = vim.api.nvim_win_get_width(0) - 4,
+  }
 })
 

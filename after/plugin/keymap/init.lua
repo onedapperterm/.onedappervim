@@ -24,6 +24,7 @@ nnoremap("<S-down>", "<C-w>j")
 nnoremap("<s-tab>", ":bprevious<CR>")
 nnoremap("<tab>", ":bnext<CR>")
 nnoremap("<s-q>", ":bd<CR>")
+nnoremap("«", ":tabclose<CR>")
 nnoremap("<s-left>", ":BufferLineMovePrev<CR>")
 nnoremap("<s-right>", ":BufferLineMoveNext<CR>")
 nnoremap("<leader>v", ":vsplit<CR>")
@@ -45,19 +46,19 @@ vnoremap("º", ":m '>+1<CR>gv=gv")
 vnoremap("∆", ":m '<-2<CR>gv=gv")
 
 --Telescope
-nnoremap("<leader>r", ":Telescope lsp_references<CR><ESC>")
-vim.api.nvim_buf_set_keymap(0, 'n', 'gr', '<cmd>Telescope lsp_references<cr>', { noremap = true }) --nnoremap function not working well with this mapping
-vim.api.nvim_buf_set_keymap(0, 'n', 'gd', '<cmd>Telescope lsp_definitions<cr>', { noremap = true }) --nnoremap function not working well with this mapping
+nnoremap("<leader>r", ":Telescope lsp_references<CR> <ESC>")
+nnoremap("<leader>d", ":Telescope lsp_definitions<CR> <ESC>")
 nnoremap("<leader>lo", ":Telescope git_bcommits<CR><ESC>")
 nnoremap("<C-p>", ":Telescope find_files<CR>")
 inoremap("<C-p>", "<Esc>:Telescope find_files<CR>==gi")
 vnoremap("<C-p>", ":Telescope find_files<CR>gv==gv")
 
 --Harpoon
-nnoremap("<leader>h", ":Telescope harpoon marks<CR><ESC>")
+nnoremap("<leader>h", ":Telescope harpoon marks layout_strategy=vertical<CR><ESC>")
 nnoremap("<leader>af", ":lua require(\"harpoon.mark\").add_file()<CR>")
 nnoremap("<leader>rf", ":lua require(\"harpoon.mark\").rm_file()<CR>")
 
+--no time to configure this shit, ill do it later 
 --DAP
 -- nnoremap("<leader>db", ":lua require'dap'.toggle_breakpoint()<CR>")
 -- nnoremap("<leader>dc", ":lua require'dap'.continue()<CR>")
@@ -66,11 +67,11 @@ nnoremap("<leader>rf", ":lua require(\"harpoon.mark\").rm_file()<CR>")
 -- nnoremap("<leader>dx", ":lua require'dap'.step_out()<CR>")
 
 --Fugitive
-nnoremap("<leader>gs", ":tab Git <CR>" )
-nnoremap("<leader>ga", ":tab Git add . <CR>" )
+nnoremap("<leader>gs", ":Git <CR>" )
+nnoremap("<leader>ga", ":Git add . <CR>" )
 nnoremap("<leader>gc", ":tab Git commit <CR>" )
-nnoremap("<leader>gb", ":tab Git blame<CR>")
-nnoremap("<leader>dc", ":Git diff --cached<CR>")
+nnoremap("<leader>gb", ":tab Git blame <CR><C-w>l <C-o>")
+nnoremap("<leader>gd", ":Git diff --cached<CR><C-w>H <C-w>l")
 nnoremap("<leader>di", ":Telescope git_status<CR>")
 
 --SOME NICE MOVES

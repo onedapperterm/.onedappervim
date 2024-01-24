@@ -74,6 +74,9 @@ Plug 'sainnhe/sonokai'
 Plug 'sainnhe/gruvbox-material'
 Plug 'tomasr/molokai'
 Plug 'nvimdev/oceanic-material'
+Plug 'rose-pine/neovim'
+Plug 'catppuccin/nvim'
+Plug 'rafi/awesome-vim-colorschemes'
 
 --UTIL
 Plug 'itchyny/calendar.vim'

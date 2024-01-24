@@ -1,6 +1,18 @@
-require('telescope').setup{
+local status_ok, telescope = pcall(require, "telescope")
+if not status_ok then
+  return
+end
+
+telescope.setup{
   defaults = {
     file_ignore_patterns = {"node_modules"},
+    layout_config = {
+      vertical = { width = 0.9 },
+      horizontal = { width = 0.9 }
+    },
+    path_display = {
+      "smart",
+    },
     mappings = {
       i = {
         -- map actions.which_key to <C-h> (default: <C-/>)
@@ -45,9 +57,9 @@ require('telescope').setup{
 }
 
 
-require("telescope").load_extension "media_files"
-require("telescope").load_extension "file_browser"
-require("telescope").load_extension "harpoon"
+telescope.load_extension "media_files"
+telescope.load_extension "file_browser"
+telescope.load_extension "harpoon"
 
 -- ignores env and node files in specific node or python projects
 vim.api.nvim_exec([[
