@@ -16,7 +16,9 @@ configs.setup({
     indent = { enable = true, disable = { "python", "css" } },
 })
 
-vim.api.nvim_set_hl(0, "@foo.bar.lua", { link = "myReturn" })
+-- vim.api.nvim_set_hl(0, "@foo.bar.lua", { link = "myReturn" })
 
--- hlargs plugin
+-- -- hlargs plugin
 require('hlargs').setup()
+require('hlargs').enable()
+

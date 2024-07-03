@@ -58,14 +58,6 @@ nnoremap("<leader>h", ":Telescope harpoon marks layout_strategy=vertical<CR><ESC
 nnoremap("<leader>af", ":lua require(\"harpoon.mark\").add_file()<CR>")
 nnoremap("<leader>rf", ":lua require(\"harpoon.mark\").rm_file()<CR>")
 
---no time to configure this shit, ill do it later 
---DAP
--- nnoremap("<leader>db", ":lua require'dap'.toggle_breakpoint()<CR>")
--- nnoremap("<leader>dc", ":lua require'dap'.continue()<CR>")
--- nnoremap("<leader>do", ":lua require'dap'.step_over()<CR>")
--- nnoremap("<leader>di", ":lua require'dap'.step_into()<CR>")
--- nnoremap("<leader>dx", ":lua require'dap'.step_out()<CR>")
-
 --Fugitive
 nnoremap("<leader>gs", ":Git <CR>" )
 nnoremap("<leader>ga", ":Git add . <CR>" )
@@ -88,14 +80,24 @@ vnoremap("<leader>m", "@") --but running them with leader + m is actually better
 
 --Others
 nnoremap ("<esc><esc>", ":silent! nohls<cr>")
+nnoremap ("<leader>j", "gqj")
 
 --Paste without loosing current register
 xnoremap("<leader>p", "\"_dP")
 
 --Copy to system clipboard
-nnoremap("<leader>y", "\"+y")
-vnoremap("<leader>y", "\"+y")
-nnoremap("<leader>Y", "\"+y")
+nnoremap("y", '"*y')
+vnoremap("y", '"*y')
 
 --Search and replace current word
 nnoremap("<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+
+--procrastinate
+nnoremap("<leader>mr", "<cmd>CellularAutomaton make_it_rain<CR>");
+
+
+
+
+
+
+

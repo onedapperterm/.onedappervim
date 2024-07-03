@@ -5,40 +5,40 @@ end
 
 lsp.preset("recommended")
 
-local servers = { "jsonls", "angularls", "lua_ls", "cssls", "tsserver", "eslint", "html", "pyright", "astro" }
+local servers = {
+  "jsonls",
+  "angularls",
+  "lua_ls",
+  "cssls",
+  "tsserver",
+  "eslint",
+  "html",
+  "pyright",
+  "astro",
+  "volar",
+  "rust_analyzer",
+  "clangd",
+}
 
-lsp.ensure_installed(servers)
+local dapper_handlers = require("onedapperterm.lsp.handlers")
+lsp.on_attach(function(client, bufnr)
+  -- see :help lsp-zero-keybindings
+  -- to learn the available actions
+  dapper_handlers.on_attach(client, bufnr)
+  lsp.default_keymaps({buffer = bufnr})
+end)
 
-for _, server in pairs(servers) do
-  lsp.configure( server, {
-    on_attach = require("onedapperterm.lsp.handlers").on_attach,
-  })
+require('mason').setup({})
+require('mason-lspconfig').setup({
+  ensure_installed = servers,
 
-end
-
---TODO: Check how to pass the custom configs on the loop to lsp-zero for every server
-lsp.configure('lua_ls', {
-    settings = {
-        Lua = {
-            -- Fix Undefined global 'vim'
-            diagnostics = {
-                globals = { 'vim' }
-            }
-        }
-    }
+  handlers = {
+    lsp.default_setup,
+    ["lua_ls"] = function()
+      require('lspconfig').lua_ls.setup(lsp.nvim_lua_ls())
+    end,
+  },
 })
 
 
 lsp.setup()
-
--- for _, server in pairs(servers) do
--- 	local opts = {
--- 		on_attach = require("onedapperterm.lsp.handlers").on_attach,
--- 		capabilities = require("onedapperterm.lsp.handlers").capabilities,
--- 	}
--- 	local has_custom_opts, server_custom_opts = pcall(require, "onedapperterm.lsp.settings." .. server)
--- 	if has_custom_opts then
--- 		opts = vim.tbl_deep_extend("force", opts, server_custom_opts)
--- 	end
---   lspconfig[server].setup(opts)
--- end

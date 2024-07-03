@@ -5,11 +5,12 @@ vim.call('plug#begin','~/.vim/plugged')
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 
---TREE SITTER
+--TREE SITTER AND HIGHLIGHT
 Plug 'nvim-treesitter/nvim-treesitter'
 Plug 'JoosepAlviste/nvim-ts-context-commentstring'
 Plug 'windwp/nvim-autopairs'
 Plug 'm-demare/hlargs.nvim'
+Plug 'RRethy/vim-illuminate'
 
 --LSP
 Plug 'neovim/nvim-lspconfig'
@@ -34,14 +35,9 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'mbbill/undotree'
-
---DEBUGGING TOOLS
-Plug 'mfussenegger/nvim-dap'
-Plug 'rcarriga/nvim-dap-ui'
-Plug 'theHamsta/nvim-dap-virtual-text'
-Plug 'nvim-telescope/telescope-dap.nvim'
---NVIM DAP ADAPTERS
-Plug 'mxsdev/nvim-dap-vscode-js' --adapter for vscode-js-debug
+Plug 'github/copilot.vim'
+Plug 'folke/todo-comments.nvim'
+Plug 'sindrets/diffview.nvim'
 
 --TELESCOPE
 Plug 'nvim-telescope/telescope.nvim'
@@ -52,6 +48,7 @@ Plug 'nvim-telescope/telescope-file-browser.nvim'
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'akinsho/bufferline.nvim'
 Plug 'phanviet/vim-monokai-pro'
+Plug 'lukas-reineke/indent-blankline.nvim'
 
 --ICONS
 Plug 'kyazdani42/nvim-web-devicons'
@@ -63,9 +60,7 @@ Plug 'kyazdani42/nvim-tree.lua'
 Plug 'ThePrimeagen/harpoon'
 
 --COLORS
-Plug 'onedapperterm/onedapperpro.nvim'
 Plug 'vv9k/bogster'
-Plug 'maxmx03/dracula.nvim'
 Plug 'maxmx03/fluoromachine.nvim'
 Plug 'mhartington/oceanic-next'
 Plug 'morhetz/gruvbox'
@@ -85,8 +80,10 @@ Plug 'norcalli/nvim-colorizer.lua'
 Plug 'jamestthompson3/nvim-remote-containers'
 Plug 'MunifTanjim/nui.nvim'
 Plug 'rcarriga/nvim-notify'
+Plug 'skywind3000/asyncrun.vim'
 
---JAVA
-Plug 'mfussenegger/nvim-jdtls'
+-- JUST FOR FUN
+Plug 'eandrju/cellular-automaton.nvim'
+
 
 vim.call('plug#end')
