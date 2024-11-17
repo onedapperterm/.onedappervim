@@ -43,3 +43,14 @@ vim.g.mapleader = " "
 --Take words joined with - as one
 vim.cmd [[set iskeyword+=-]]
 
+vim.api.nvim_create_autocmd("OptionSet", {
+  pattern = {"number", "relativenumber"},
+  callback = function(ev)
+    print(string.format(
+      "Option '%s' was changed to '%s' by: %s",
+      ev.option,
+      vim.o[ev.option],
+      debug.traceback()
+    ))
+  end
+})

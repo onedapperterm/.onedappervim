@@ -3,14 +3,12 @@ if not status_ok then
 	return
 end
 
-lsp.preset("recommended")
-
 local servers = {
   "jsonls",
   "angularls",
   "lua_ls",
   "cssls",
-  "tsserver",
+  "ts_ls",
   "eslint",
   "html",
   "pyright",

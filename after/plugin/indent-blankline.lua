@@ -11,7 +11,7 @@ require("ibl").setup {
     },
     scope = {
         show_start = false,
-        show_end = true,
+        show_end = false,
         injected_languages = false,
         priority = 1000,
         show_exact_scope = false,

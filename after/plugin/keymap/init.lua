@@ -19,6 +19,7 @@ vnoremap("<C-h>", "<C-w>h")
 vnoremap("<C-l>", "<C-w>l")
 nnoremap("<S-up>", "<C-w>k")
 nnoremap("<S-down>", "<C-w>j")
+nnoremap("<leader>q", ":only<CR>")
 
 --Buffers Navigation
 nnoremap("<s-tab>", ":bprevious<CR>")
@@ -46,10 +47,11 @@ vnoremap("º", ":m '>+1<CR>gv=gv")
 vnoremap("∆", ":m '<-2<CR>gv=gv")
 
 --Telescope
-nnoremap("<leader>r", ":Telescope lsp_references<CR> <ESC>")
-nnoremap("<leader>d", ":Telescope lsp_definitions<CR> <ESC>")
+nnoremap("<leader>r", ":Telescope lsp_references layout_strategy=bottom_pane<CR><ESC>")
+nnoremap("<leader>d", ":Telescope lsp_definitions layout_strategy=bottom_pane<CR><ESC>")
 nnoremap("<leader>lo", ":Telescope git_bcommits<CR><ESC>")
 nnoremap("<C-p>", ":Telescope find_files<CR>")
+nnoremap("<leader>ll", ":Telescope live_grep layout_strategy=bottom_pane<CR>")
 inoremap("<C-p>", "<Esc>:Telescope find_files<CR>==gi")
 vnoremap("<C-p>", ":Telescope find_files<CR>gv==gv")
 

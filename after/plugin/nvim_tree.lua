@@ -12,13 +12,14 @@ local function my_on_attach(bufnr)
   vim.keymap.set('n', '<C-t>',  api.tree.change_root_to_parent,  opts('Up'))
   vim.keymap.set('n', '?',      api.tree.toggle_help,            opts('Help'))
   vim.keymap.set('n', 'l',      api.node.open.edit,               opts('Open: New Tab'))
-  vim.keymap.set('n', 'h',      api.node.navigate.parent_close,  opts('Close Directory'))
+  vim.keymap.set('n', 'h',      api.node.open.edit,  opts('Close Directory'))
 
   --some color fixes
   vim.api.nvim_command("hi NvimTreeWinSeparator guifg=#232d38 gui=bold")
   vim.api.nvim_command("hi NvimTreeEndOfBuffer guifg=#161c23")
   vim.api.nvim_command("hi NvimTreeIndentMarker guifg=#232d38")
 end
+
 
 require("nvim-tree").setup({
   on_attach = my_on_attach,

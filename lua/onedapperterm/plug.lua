@@ -35,7 +35,7 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'mbbill/undotree'
-Plug 'github/copilot.vim'
+-- Plug 'github/copilot.vim'
 Plug 'folke/todo-comments.nvim'
 Plug 'sindrets/diffview.nvim'
 
@@ -43,6 +43,7 @@ Plug 'sindrets/diffview.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-telescope/telescope-media-files.nvim'
 Plug 'nvim-telescope/telescope-file-browser.nvim'
+Plug 'nvim-telescope/telescope-fzf-native.nvim'
 
 --LINE
 Plug 'nvim-lualine/lualine.nvim'
